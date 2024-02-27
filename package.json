@@ -1,0 +1,29 @@
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tailwindcss -i src/styles/base.css -o src/styles/salida.css --watch",
+    "des": "parcel src/index.html --dist-dir dev",
+    "prod": "parcel build src/index.html --public-url ./ --dist-dir produccion",
+    "limpia": "rimraf dev produccion .parcel-cache",
+    "dev": "npm-run-all -p limpia watch des",
+    "produccion": "npm-run-all limpia watch prod",
+    "ordena": "prettier --write src"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.11.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "rimraf": "^5.0.5",
+    "run-all": "^1.0.1",
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "flowbite": "^2.3.0"
+  }
+}
